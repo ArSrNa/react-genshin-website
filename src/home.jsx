@@ -13,11 +13,11 @@ export default function Liyue() {
   return (
     <div className="character">
       <Background />
-      <Xiao />
+      <CharacterInfo />
     </div>
   );
 }
-function Background({cvName="undefined",intro}) {
+function Background({ cvName = "undefined", intro }) {
   return (
     <>
       <div
@@ -47,7 +47,7 @@ function CharacterInfo() {
           overflow: "hidden",
         }}
       >
-        {cvName || "undefined"}
+        {cvName || "Powered by Ar-Sr-Na"}
       </div>
     </div>
   );
@@ -67,30 +67,30 @@ function CharacterInfo() {
       </div>
     </div>
   );
-  // const intro = (
-  //   <>
-  //     守护璃月港的「三眼五显仙人」之一，妙称「护法夜叉大将」。
-  //     <br />
-  //     虽然外表看起来是一个少年人，但一些有关他的传说，已在古卷中流传千年。
-  //     <br />
-  //     对望舒客栈中一道名为「杏仁豆腐」的菜颇为喜爱。
-  //     <br />
-  //     究其原因，是因为「杏仁豆腐」的味道，与他曾经吞噬过的「美梦」十分相似。
-  //   </>
-  // );
+  const intro = (
+    <>
+      守护璃月港的「三眼五显仙人」之一，妙称「护法夜叉大将」。
+      <br />
+      虽然外表看起来是一个少年人，但一些有关他的传说，已在古卷中流传千年。
+      <br />
+      对望舒客栈中一道名为「杏仁豆腐」的菜颇为喜爱。
+      <br />
+      究其原因，是因为「杏仁豆腐」的味道，与他曾经吞噬过的「美梦」十分相似。
+    </>
+  );
 
   return (
     <>
       <div className="character-content">
         <img
           className="character-name"
-          src={require("./images/character/Beidou/ctext.png")}
+          src={require("./images/character/Xiao/ctext.png")}
         />
         <CharacterCV />
         <CharacterIntro intro={intro} />
         <img
           style={{ opacity: 1, transform: "translateX(0)" }}
-          src={require("./images/character/Beidou/index.png")}
+          src={require("./images/character/Xiao/index.png")}
           draggable="false"
           class="character__person animated"
         ></img>
@@ -101,8 +101,4 @@ function CharacterInfo() {
       </div>
     </>
   );
-}
-
-function (){
-
 }
