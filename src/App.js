@@ -1,8 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
-import { Layout } from 'antd';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Liyue from './home';
+import logo from "./logo.svg";
+import "./App.css";
+import { Layout } from "antd";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Liyue } from "./home";
 const { Footer, Sider, Content } = Layout;
 
 function App() {
@@ -23,31 +23,47 @@ function Main() {
         </Routes>
       </Content>
     </Layout>
-  )
+  );
 }
 
 function Header() {
-  const menus = [{
-    label: "首页（没做）",
-    active: false
-  }, {
-    label: "角色",
-    active: true
-  }, {
-    label: "没做",
-    active: false
-  }, {
-    label: "没做",
-    active: false
-  }]
-  return (<>
-    <div className='header'>
-      <img style={{ height: 60 }} src={require('./images/header/header.png')} />
-      {menus.map(menu => (
-        <div key={(Math.random() * 1000).toFixed(2)} className={`nav-item ${menu.active ? 'nav-item-active' : ''}`}>{menu.label}</div>
-      ))}
-    </div>
-  </>)
+  const menus = [
+    {
+      label: "首页（没做）",
+      active: false,
+    },
+    {
+      label: "角色",
+      active: true,
+    },
+    {
+      label: "没做",
+      active: false,
+    },
+    {
+      label: "没做",
+      active: false,
+    },
+  ];
+  return (
+    <>
+      <div className="header">
+        <img
+          alt="logo"
+          style={{ height: 60 }}
+          src={require("./images/header/header.png")}
+        />
+        {menus.map((menu) => (
+          <div
+            key={(Math.random() * 1000).toFixed(2)}
+            className={`nav-item ${menu.active ? "nav-item-active" : ""}`}
+          >
+            {menu.label}
+          </div>
+        ))}
+      </div>
+    </>
+  );
 }
 
 export default App;

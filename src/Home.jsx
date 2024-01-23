@@ -4,7 +4,7 @@ import "swiper/swiper-bundle.css";
 import "./css/official.css";
 SwiperCore.use([Autoplay, EffectFade]);
 
-export function Liyue() {
+export default function Liyue() {
   const characters = [
     {
       name: "xiao",
@@ -17,52 +17,20 @@ export function Liyue() {
     </div>
   );
 }
-
-export function Fontaine() {
-  const characters = [
-    {
-      name: "Furina",
-    },
-  ];
-  return (
-    <div className="character">
-      <Background
-        bg={[
-          require("./images/background/Liyue/1.jpg"),
-          require("./images/background/Liyue/2.jpg"),
-        ]}
-      />
-      <CharacterInfo
-        intro={
-          <>
-            守护璃月港的「三眼五显仙人」之一，妙称「护法夜叉大将」。
-            <br />
-            虽然外表看起来是一个少年人，但一些有关他的传说，已在古卷中流传千年。
-            <br />
-            对望舒客栈中一道名为「杏仁豆腐」的菜颇为喜爱。
-            <br />
-            究其原因，是因为「杏仁豆腐」的味道，与他曾经吞噬过的「美梦」十分相似。
-          </>
-        }
-      />
-    </div>
-  );
-}
-
-function Background({ cvName, bg }) {
+function Background({ cvName, intro }) {
   return (
     <>
       <div
         className="background-image"
         style={{
-          backgroundImage: `url(${bg[0]})`,
+          backgroundImage: `url(${require("./images/background/1.jpg")})`,
           animation: `img-scale 80s infinite linear`,
         }}
       />
       <div
         className="background-image"
         style={{
-          backgroundImage: `url(${bg[1]})`,
+          backgroundImage: `url(${require("./images/background/2.jpg")})`,
           animation: `bg-change 15s infinite linear, img-scale 80s infinite linear`,
         }}
       />
@@ -70,7 +38,7 @@ function Background({ cvName, bg }) {
   );
 }
 
-function CharacterInfo({ intro }) {
+function CharacterInfo() {
   const CharacterCV = ({ cvName }) => (
     <div className="character-cv">
       <div
@@ -98,6 +66,17 @@ function CharacterInfo({ intro }) {
           "undefined"}
       </div>
     </div>
+  );
+  const intro = (
+    <>
+      守护璃月港的「三眼五显仙人」之一，妙称「护法夜叉大将」。
+      <br />
+      虽然外表看起来是一个少年人，但一些有关他的传说，已在古卷中流传千年。
+      <br />
+      对望舒客栈中一道名为「杏仁豆腐」的菜颇为喜爱。
+      <br />
+      究其原因，是因为「杏仁豆腐」的味道，与他曾经吞噬过的「美梦」十分相似。
+    </>
   );
 
   return (
