@@ -190,3 +190,14 @@
   overflow: hidden;
   font-size: 12px;
 }
+
+.character-person {
+  position: absolute;
+  top: -18vh;
+  left: -5vw;
+  width: auto;
+  height: 100vh;
+  opacity: 0;
+  /* transform: translateX(500px); */
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}

@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { Layout } from "antd";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Liyue } from "./home";
+import { Fontain, Liyue } from "./home";
 const { Footer, Sider, Content } = Layout;
 
 function App() {
@@ -19,7 +19,7 @@ function Main() {
       <Header />
       <Content>
         <Routes>
-          <Route path="/" element={<Liyue />} />
+          <Route path="/" element={<Fontain />} />
         </Routes>
       </Content>
     </Layout>
