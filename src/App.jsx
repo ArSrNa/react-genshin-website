@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { Layout } from "antd";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Fontain, Liyue } from "./home";
+import { Fontain, Liyue } from "./Home";
 const { Footer, Sider, Content } = Layout;
 
 function App() {
