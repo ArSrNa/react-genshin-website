@@ -599,3 +599,104 @@
         opacity: 0
     }
 }
+
+
+.poster__video-entry {
+    width: 356px;
+    height: 76px;
+    background: url(/images/btn-vid.png) no-repeat center center;
+    margin-bottom: 20px;
+}
+
+.poster__video {
+    position: relative;
+    display: block;
+    margin: 14px auto 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 0;
+    background: #fff;
+    font-size: 0;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.2s linear;
+}
+
+.poster__video::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 28px;
+    height: 28px;
+    transform: translate(-50%, -50%);
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAA4CAYAAADuMJi0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2lpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2MDkyNCwgMjAxNy8wNy8xMy0wMTowNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpjYThkMDRiYy1jNTZkLTJkNDMtOGY5Yy02OGY3YWNhYzQ5ZjgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTA2MkM0NEE4MTEyMTFFOThGQkVBMzY2NjBEODFGQzgiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTA2MkM0NDk4MTEyMTFFOThGQkVBMzY2NjBEODFGQzgiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjg0RkI2NTNEODBGNjExRTlCRkZGRDA0Q0Y2REQ5QTFEIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjg0RkI2NTNFODBGNjExRTlCRkZGRDA0Q0Y2REQ5QTFEIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+owt/IAAAAa5JREFUeNrsmE9Kw0AYxZvafT1BPUC9gJ7AhXanuK4iuKguCkVB/IOgCK1GrBaEbqwbddW0UE+gF/ACvYEXsOMbyGAWSSZ1Jm8R+uDHBBLmZSYz3zdfHCFEjql8jqxC3M3VnfoKml3QGT623hkjlGYVMIJ5ExTTNqwEruvgG6Y1E0MnbtGg86ibPX+aP1mGSpfgCMYT1io9BD94sSp7W3Rh2gbltKc0TCfgHNMsWBv/DEzwsuvsSPMKUxeUmKFtH4xh2mDH0iuYrrGDt8M0PMCq9bTZwoJuwQ3MxonSk6E2YfTC2Banst8wM9sjfPAzyNe/M/4U2oZRlxG8ZXoqJDUzGeGzP30fVg9REdqD0V1aZ5pB4PoazJuYJRlhR7UwGlmJb5k/ec8MZW3R91s7kosmhr74UxMUNc9r0T0QphrbUOoJLDENlS5AnmmoVGUbSrVBmWmodAycqD51sdQk0G6AN2ptAVxQmmbj21KDMaVhPygG2a0tgMf4hi5YCPaZam0BeLVFmJntKb0Hi6zQtsVMT3OM9NQDy5k4YngBo5aNQ1Ti2kL+FZ7VFkn0K8AA4lbtjhMjqe0AAAAASUVORK5CYII=) no-repeat;
+    background-position: center top;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.ys-download-pc__box--download .ys-download-pc__btn img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.city__list-char {
+    position: absolute;
+    z-index: 2;
+    /* top: 0; */
+    left: 0;
+    width: 100%;
+    /* height: 100%; */
+    height: 260px;
+    background-repeat: no-repeat;
+    background-position: calc(50% + 360px) 50%;
+    background-size: 960px 260px;
+    opacity: 0;
+    transition: all 0.2s 0s ease-in;
+    /* border: #fff solid 6px; */
+    box-sizing: border-box;
+}
+
+.city__list-item-p-after {
+    position: absolute;
+    bottom: 91px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* display: block; */
+    content: '';
+    width: 210px;
+    height: 10px;
+    background: url(/images/css/city-list-after.png) center no-repeat;
+    background-size: 210px 10px;
+}
+
+.city__list-item-p {
+    display: inline-block;
+    position: absolute;
+    transition: all .5s;
+    z-index: 3;
+    font-size: 36px;
+    color: #fff;
+    line-height: 260px;
+    width: 100%;
+    height: 260px;
+    background: url(/images/css/city-name-after.png) center no-repeat;
+    background-size: 132px;
+    text-align: center;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    margin: 0 !important;
+    overflow: hidden;
+}
