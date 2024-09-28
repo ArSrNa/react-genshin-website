@@ -15,7 +15,7 @@ class MyDocument extends Document {
                 <meta name="theme-color" content="#000000" />
                 <meta name="description" content="原神 | Ar-Sr-Na react" />
                 <meta name="baidu-site-verification" content="codeva-8zSmxFoXSc" />
-                <title>react - 原神</title>
+                <title>React - 原神</title>
                 <Head />
                 <body>
                     <Main />
