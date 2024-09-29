@@ -1,6 +1,6 @@
 import Router from "next/router";
-import {useState} from "react";
-import {Swiper, SwiperSlide} from "swiper/react";
+import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function Home() {
   return (
@@ -16,7 +16,11 @@ export default function Home() {
 }
 
 function Footer() {
-  return <div style={{textAlign: "center", height: 50, lineHeight: "50px"}}>Powered by Ar-Sr-Na</div>;
+  return (
+    <div style={{ textAlign: "center", height: 50, lineHeight: "50px" }}>
+      Powered by Ar-Sr-Na
+    </div>
+  );
 }
 
 function Poster() {
@@ -38,11 +42,11 @@ function Poster() {
       />
 
       <div className="home-upper">
-        <div className="poster-video-entry" style={{display: "flex"}}>
+        <div className="poster-video-entry" style={{ display: "flex" }}>
           <button className="poster-video">播放</button>
         </div>
 
-        <div style={{display: "flex", gap: 15, color: "white"}}>
+        <div style={{ display: "flex", gap: 15, color: "white" }}>
           <div>二维码</div>
           <img src="/images/cgi.png" />
           卧槽他居然是图片层叠通过鼠标事件替换的，这个工作量太大了
@@ -59,48 +63,62 @@ interface CountriesType {
   href: string;
 }
 function Countries() {
-  function CtContainer({title, image, character, href}) {
+  function CtContainer({ title, image, character, href }) {
     const [active, setActive] = useState(false);
     return (
       <div
         onClick={() => Router.push(href)}
-        onMouseEnter={e => setActive(true)}
-        onMouseOut={e => setActive(false)}
-        style={{overflow: "hidden", height: 260}}>
+        onMouseEnter={(e) => setActive(true)}
+        onMouseOut={(e) => setActive(false)}
+        style={{ overflow: "hidden", height: 260 }}
+      >
         <div
           style={{
             backgroundImage: `url(${character})`,
             opacity: active ? 1 : 0,
-            border: active ? "rgba(255,255,255,1) solid 6px" : "rgba(255,255,255,0) solid 6px",
+            border: active
+              ? "rgba(255,255,255,1) solid 6px"
+              : "rgba(255,255,255,0) solid 6px",
           }}
           className="city-list-char"
         />
         <div className="city-list-item-p">{title}</div>
         <img
           src="/images/css/city-list-after.png"
-          className={`contries-list-after ${active && "contries-list-after-active"}`}
+          className={`contries-list-after ${
+            active && "contries-list-after-active"
+          }`}
         />
-        <img className={`contries-bg ${active && "contries-bg-active"}`} src={image} />
+        <img
+          className={`contries-bg ${active && "contries-bg-active"}`}
+          src={image}
+        />
       </div>
     );
   }
   const lists: Array<CountriesType> = [
     {
       title: "蒙德城",
-      image: "https://uploadstatic.mihoyo.com/contentweb/20200211/2020021114213984258.jpg",
-      character: "https://uploadstatic.mihoyo.com/contentweb/20220121/2022012117384457834.png",
+      image:
+        "https://uploadstatic.mihoyo.com/contentweb/20200211/2020021114213984258.jpg",
+      character:
+        "https://uploadstatic.mihoyo.com/contentweb/20220121/2022012117384457834.png",
       href: "/character",
     },
     {
       title: "璃月港",
-      image: "https://uploadstatic.mihoyo.com/contentweb/20200515/2020051511071844630.jpg",
-      character: "https://uploadstatic.mihoyo.com/contentweb/20210624/2021062410110987203.png",
+      image:
+        "https://uploadstatic.mihoyo.com/contentweb/20200515/2020051511071844630.jpg",
+      character:
+        "https://uploadstatic.mihoyo.com/contentweb/20210624/2021062410110987203.png",
       href: "/character",
     },
     {
       title: "稻妻城",
-      image: "https://uploadstatic.mihoyo.com/contentweb/20210720/2021072011394586258.jpg",
-      character: "https://uploadstatic.mihoyo.com/contentweb/20210719/2021071917013922761.png",
+      image:
+        "https://uploadstatic.mihoyo.com/contentweb/20210720/2021072011394586258.jpg",
+      character:
+        "https://uploadstatic.mihoyo.com/contentweb/20210719/2021071917013922761.png",
       href: "/character",
     },
     {
@@ -130,43 +148,18 @@ function Countries() {
   ];
   return (
     <>
-      {lists.map(props => (
+      {lists.map((props) => (
         <CtContainer {...props} />
       ))}
       <div>
-        <div
-          style={{
-            display: "inline-block",
-            position: "absolute",
-            zIndex: 3,
-            fontSize: 36,
-            color: "rgba(255,255,255,0.3)",
-            lineHeight: "260px",
-            width: "100%",
-            height: 260,
-            textAlign: "center",
-            textShadow: "0 2px 6px rgba(0, 0, 0, 0.2)",
-            margin: "0 !important",
-            overflow: "hidden",
-          }}>
-          敬请期待
-        </div>
-        <img
-          src="/images/index/tbc.jpg"
-          style={{
-            height: 260,
-            filter: "brightness(.6)",
-            transition: "all 0.4s 0s ease-out;",
-            width: "100%",
-            objectFit: "cover",
-            zIndex: 0,
-          }}
-        />
+        <div className="contries-expect">敬请期待</div>
+        <img src="/images/index/tbc.jpg" className="contries-expect-bg" />
       </div>
     </>
   );
 }
 
+/**新闻板块 */
 function News() {
   const [current, setCurrent] = useState(0);
   interface pics {
@@ -196,7 +189,8 @@ function News() {
   const newsList = [
     [
       {
-        title: "《原神》「神铸赋形」活动祈愿现已开启，「双手剑·山王长牙」「长柄武器·薙草之稻光」概率UP！",
+        title:
+          "《原神》「神铸赋形」活动祈愿现已开启，「双手剑·山王长牙」「长柄武器·薙草之稻光」概率UP！",
         time: "2024/09/17",
         path: "/main/news/detail/125835",
       },
@@ -205,28 +199,25 @@ function News() {
 
   return (
     <>
-      <div
-        className="news"
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          width: "100%",
-          height: 910,
-          background: `url("/images/index/news_bg.jpg") no-repeat center / cover`,
-          color: "#fff",
-        }}>
+      <div className="news">
         <h3>新闻资讯</h3>
         <div className="news-main">
           <Swiper
             loop
             pagination
             width={640}
-            autoplay={{delay: 2000}}
-            style={{width: 640, overflow: "hidden", marginLeft: 0, marginRight: 0}}>
-            {pics.map(n => {
+            autoplay={{ delay: 2000 }}
+            style={{
+              width: 640,
+              overflow: "hidden",
+              marginLeft: 0,
+              marginRight: 0,
+            }}
+          >
+            {pics.map((n) => {
               return (
                 <SwiperSlide>
-                  <img style={{width: 640, overflow: "hidden"}} src={n.url} />
+                  <img style={{ width: 640, overflow: "hidden" }} src={n.url} />
                 </SwiperSlide>
               );
             })}
@@ -235,8 +226,11 @@ function News() {
             <div className="news-tab-list">
               {["最新", "新闻", "公告", "活动"].map((n, i) => (
                 <div
-                  className={`news-tab-item ${current === i && "news-tab-item--active"}`}
-                  onClick={() => setCurrent(i)}>
+                  className={`news-tab-item ${
+                    current === i && "news-tab-item--active"
+                  }`}
+                  onClick={() => setCurrent(i)}
+                >
                   {n}
                 </div>
               ))}
@@ -245,14 +239,22 @@ function News() {
               {newsList[current] !== void "我永远喜欢甘雨" &&
                 newsList[current].map((news, i) => (
                   <li>
-                    <a href={`https://ys.mihoyo.com${news.path}`} className="news-item" title={news.title}>
+                    <a
+                      href={`https://ys.mihoyo.com${news.path}`}
+                      className="news-item"
+                      title={news.title}
+                    >
                       <p className="news-title ellipsis">{news.title}</p>
                       <p className="news-date">{news.time}</p>
                     </a>
                   </li>
                 ))}
             </ul>
-            <a href="https://ys.mihoyo.com/main/news" target="_blank" className="news-more">
+            <a
+              href="https://ys.mihoyo.com/main/news"
+              target="_blank"
+              className="news-more"
+            >
               查看全部资讯
             </a>
           </div>
