@@ -99,7 +99,7 @@ function CharacterInfo({intro, cName, index, element}) {
           width: 480,
           maxHeight: 130,
         }}>
-        {<div style={{overflowY: "auto", paddingRight: 20}}>{intro}</div> || "undefined"}
+        <div style={{overflowY: "auto", paddingRight: 20}}>{intro}</div>
       </div>
     </div>
   );
