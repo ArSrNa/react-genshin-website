@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    transpilePackages: ['tdesign-react'],
-    // distDir: 'build',
-    output: 'export',
-    trailingSlash: true,
     reactStrictMode: false,
+    transpilePackages: ["antd", "@ant-design", "@ant-design/icons", "rc-util", "rc-pagination", "rc-picker", "rc-notification", "rc-tooltip", "rc-tree", "rc-table"],
+    // distDir: 'build',
+    // output: 'standalone',
+    // trailingSlash: true
 };
 
 module.exports = nextConfig;
