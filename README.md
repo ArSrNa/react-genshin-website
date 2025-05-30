@@ -1,7 +1,10 @@
 # CNB EO Demo
 本项目为nextjs在cnb构建，并上传到Edgeone Pages的demo。
 
-TODO，晚点再写
+demo：[https://gi.cnbnb.cn](https://gi.cnbnb.cn)
+
+实现方法前往：[https://cnb.cool/arsrna/next-cnb-eo-demo](https://cnb.cool/arsrna/next-cnb-eo-demo)
+
 
 # React 重现原神官网
 
