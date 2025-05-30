@@ -1,6 +1,11 @@
+# CNB EO Demo
+本项目为nextjs在cnb构建，并上传到Edgeone Pages的demo。
+
+TODO，晚点再写
+
 # React 重现原神官网
 
-项目没有任何技术含量，仅作为react描述UI与交互的参考，请勿将其作为正式项目或个人作品使用！
+项目UI没有任何技术含量，仅作为react描述UI与交互的参考，请勿将其作为正式项目或个人作品使用！
 
 # 部署与安装
 
