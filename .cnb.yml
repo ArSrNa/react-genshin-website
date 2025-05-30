@@ -43,7 +43,7 @@ $:
             - pnpm i
             - npm run build
         - name: 部署我的 eo pages 正式环境
-          image: docker.cnb.cool/looc/deploy-eopages:latest
+          image: tencentcom/deploy-eopages:latest
           imports: https://cnb.cool/arsrna/env/-/blob/main/tencent.yml
           script: 
             - edgeone pages deploy ./out -n react-genshin-cnb-website -t $EO_SECRET
