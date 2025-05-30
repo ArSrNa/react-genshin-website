@@ -5,6 +5,8 @@ demo：[https://gi.cnbnb.cn](https://gi.cnbnb.cn)
 
 实现方法前往：[https://cnb.cool/arsrna/next-cnb-eo-demo](https://cnb.cool/arsrna/next-cnb-eo-demo)
 
+关键配置：
+`.cnb.yml`中`push.eo_deploy`流水线
 
 # React 重现原神官网
 
